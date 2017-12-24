@@ -1,3 +1,5 @@
+// PcapHeader.java
+
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -21,7 +23,7 @@ public class PcapHeader {
      * Satisfy the "variable might not have bben initialized clause"
      */
     private PcapHeader() {
-        this.magic = PcapMagic.NULL;
+        this.magic = PcapMagic.INVALID;
         this.timeZone = this.sigFigs = this.snapLen = 0;
         this.version = "";
         this.netCapDev = PcapNetworkDevice.NULL;
